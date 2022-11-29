@@ -1,0 +1,13 @@
+#StartChat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+#StartChat img {
+    height: 20rem;
+}
+#StartChat span {
+    color: #4e0eff;
+}
