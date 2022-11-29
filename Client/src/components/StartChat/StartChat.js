@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './style.css'
 import Robot from "../../assets/robot.gif";
+import LogoutButton from "../LogoutButton/LogoutButton";
 export default function Welcome() {
   const [userName, setUserName] = useState("");
   useEffect(async () => {
@@ -12,6 +13,9 @@ export default function Welcome() {
   }, []);
   return (
     <div id='StartChat'>
+      <div className="logout">
+        <LogoutButton />
+      </div>
       <img src={Robot} alt="" />
       <h1>
         Welcome, <span>{userName}!</span>
