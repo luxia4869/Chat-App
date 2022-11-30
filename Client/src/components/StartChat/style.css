@@ -15,6 +15,16 @@
 }
 
 #StartChat .logout {
+    margin-top: 1rem;
     margin-left: auto !important;
     margin-right: 1.5rem;
+    flex: 6%;
+}
+
+#StartChat .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 94%;
 }

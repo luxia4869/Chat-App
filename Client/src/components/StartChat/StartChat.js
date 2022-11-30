@@ -16,11 +16,13 @@ export default function Welcome() {
       <div className="logout">
         <LogoutButton />
       </div>
-      <img src={Robot} alt="" />
-      <h1>
-        Welcome, <span>{userName}!</span>
-      </h1>
-      <h3>Please select a chat to Start messaging.</h3>
+      <div className="content">
+        <img src={Robot} alt="" />
+        <h1>
+          Welcome, <span>{userName}!</span>
+        </h1>
+        <h3>Please select a chat to Start messaging.</h3>
+      </div>
     </div>
   );
 }
