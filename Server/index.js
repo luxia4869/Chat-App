@@ -1,14 +1,17 @@
 const express = require("express");
 const cors = require("cors");
+const fileUpload = require('express-fileupload');
 const mongoose = require("mongoose");
 const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/message");
 const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
-
+app.use(fileUpload());
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'))
 
 mongoose
   .connect(process.env.MONGO_URL, {

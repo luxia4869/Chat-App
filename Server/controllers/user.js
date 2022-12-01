@@ -1,5 +1,8 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
+const formidable = require('formidable')
+const { dirname } = require('path');
+const path = require('path');
 
 module.exports.login = async (req, res, next) => {
   try {
@@ -30,7 +33,7 @@ module.exports.register = async (req, res, next) => {
     const user = await User.create({
       email,
       username,
-      password: hashedPassword,
+      password: hashedPassword
     });
     delete user.password;
     return res.json({ status: true, user });
@@ -56,18 +59,32 @@ module.exports.getAllUsers = async (req, res, next) => {
 module.exports.setAvatar = async (req, res, next) => {
   try {
     const userId = req.params.id;
-    const avatarImage = req.body.image;
-    const userData = await User.findByIdAndUpdate(
+    file = req.files.avatar;
+    fileName = file.name;
+    const userData = User.findByIdAndUpdate(
       userId,
       {
         isAvatarImageSet: true,
-        avatarImage,
+        avatarImage: fileName,
       },
-      { new: true }
+      function (err, docs) {
+        if (err){
+            console.log(err)
+        }
+        else{
+            console.log("Updated User : ", docs);
+        }}
     );
+    const filePath = path.join(__dirname,'../public/upload/', fileName);
+    file.mv(filePath, async (err) => {
+      if (err) {
+          next(err);
+      }
+      else{}
+    });  
     return res.json({
-      isSet: userData.isAvatarImageSet,
-      image: userData.avatarImage,
+      isSet: true,
+      image: fileName,
     });
   } catch (ex) {
     next(ex);
