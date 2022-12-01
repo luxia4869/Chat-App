@@ -75,7 +75,7 @@ export default function ChatContainer({ currentChat, socket }) {
         <div className="user-details">
           <div className="avatar">
             <img
-              src={`data:image/svg+xml;base64,${currentChat.avatarImage}`}
+              src={`http://localhost:5000/upload/${currentChat.avatarImage}`}
               alt=""
             />
           </div>

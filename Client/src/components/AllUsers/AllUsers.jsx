@@ -24,7 +24,7 @@ export default function Contacts({ contacts, changeChat }) {
 
 
 
-  const handleAvatarFileChange =async (event) => {
+  const handleAvatarFileChange = async (event) => {
     const user = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
@@ -55,9 +55,8 @@ export default function Contacts({ contacts, changeChat }) {
               return (
                 <div
                   key={contact._id}
-                  className={`contact ${
-                    index === currentSelected ? "selected" : ""
-                  }`}
+                  className={`contact ${index === currentSelected ? "selected" : ""
+                    }`}
                   onClick={() => changeCurrentChat(index, contact)}
                 >
                   <div className="avatar">
@@ -75,13 +74,13 @@ export default function Contacts({ contacts, changeChat }) {
           </div>
           <div className="current-user">
             <div className="avatar">
-            {console.log(currentUserImage)}
+              {console.log(currentUserImage)}
+              <input type='file' name='avatar' onChange={(event) => handleAvatarFileChange(event)} />
               <img
-                src={avatarUpdate!==null?`http://localhost:5000/upload/${avatarUpdate}`:`http://localhost:5000/upload/${currentUserImage}`}
+                src={avatarUpdate !== null ? `http://localhost:5000/upload/${avatarUpdate}` : `http://localhost:5000/upload/${currentUserImage}`}
                 // src={'http://localhost:5000/upload/data.png'}
                 alt="avatar"
               />
-              <input type='file' name='avatar' onChange={(event) => handleAvatarFileChange(event)}/>
             </div>
             <div className="username">
               <h2>{currentUserName}</h2>

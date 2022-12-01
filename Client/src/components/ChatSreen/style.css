@@ -22,6 +22,8 @@
     }
     #ChatScreen .chat-header .user-details .avatar img {
     height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
     }
     #ChatScreen .chat-header .user-details .username h3 {
     color: white;

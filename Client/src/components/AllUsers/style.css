@@ -46,6 +46,8 @@
 }
 #AllUsers .contacts .contact .avatar img {
     height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
 }
 #AllUsers .contacts .contact .username h3 {
     color: white;
@@ -61,9 +63,22 @@
     gap: 2rem;
 }
 #AllUsers .current-user .avatar img {
-    height: 4rem;
+    height: 3rem;
+    width: 3rem;
     max-inline-size: 100%;
+    border-radius: 100%;
 }
+
+#AllUsers .current-user .avatar input{
+    height: 3rem;
+    width: 3rem;
+    z-index: 10;
+    position: absolute;
+    opacity: 0;
+    border-radius: 100%;
+    cursor: pointer
+}
+
 #AllUsers .current-user .username h2 {
     color: white;
 }
