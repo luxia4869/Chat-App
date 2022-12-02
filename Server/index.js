@@ -6,11 +6,14 @@ const authRoutes = require("./routes/auth");
 const messageRoutes = require("./routes/message");
 const app = express();
 const socket = require("socket.io");
+// import { writeFile } from "fs";
+const writeFile = require("fs");
+
 require("dotenv").config();
 app.use(fileUpload());
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
 mongoose
@@ -34,7 +37,7 @@ const server = app.listen(process.env.PORT, () =>
 const io = socket(server, {
   cors: {
     origin: "http://localhost:3000",
-    credentials: true, 
+    credentials: true,
   },
 });
 
@@ -46,9 +49,26 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send-msg", (data) => {
+    console.log(data.type)
     const sendUserSocket = onlineUsers.get(data.to);
-    if (sendUserSocket) {
-      socket.to(sendUserSocket).emit("msg-recieve", data.msg);
+    if (data.type === "txt") {
+      if (sendUserSocket) {
+        socket.to(sendUserSocket).emit("msg-recieve", data.msg, data.filename, data.extension, data.byteFile);
+      }
+    }
+    else {
+      console.log('filemsg')
+      socket.to(sendUserSocket).emit("msg-recieve", data.msg, data.filename, data.extension, data.byteFile);
     }
   });
+
+  // socket.on("upload", (file, callback) => {
+  //   console.log(file); // <Buffer 25 50 44 ...>
+
+  //   // save the content to the disk, for example
+  //   writeFile.writeFile("/public/upload", file, (err) => {
+  //     callback({ message: err ? "failure" : "success" });
+  //   });
+  // });
+
 });

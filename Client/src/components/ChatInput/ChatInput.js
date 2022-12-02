@@ -4,7 +4,7 @@ import { IoMdSend } from "react-icons/io";
 import './style.css'
 import Picker from "emoji-picker-react";
 
-export default function ChatInput({ handleSendMsg }) {
+export default function ChatInput({ handleSendMsg, handleSendFile, socket }) {
   const [msg, setMsg] = useState("");
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const handleEmojiPickerhideShow = () => {
@@ -25,6 +25,18 @@ export default function ChatInput({ handleSendMsg }) {
     }
   };
 
+  const sendFile = (e) => {
+    console.log('12')
+    handleSendFile(e);
+  }
+
+  // function upload(files) {
+  //   socket.emit("upload", files[0], (status) => {
+  //     console.log(status);
+  //   });
+  // }
+
+
   return (
     <div id='ChatInput'>
       <div className="button-container">
@@ -34,6 +46,7 @@ export default function ChatInput({ handleSendMsg }) {
         </div>
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
+        <input type="file" onChange={(e) => sendFile(e)} />
         <input
           type="text"
           placeholder="type your message here"
