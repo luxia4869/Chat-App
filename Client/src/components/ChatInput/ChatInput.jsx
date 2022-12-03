@@ -13,6 +13,7 @@ export default function ChatInput({ handleSendMsg, handleSendFile, socket }) {
 
   const handleEmojiClick = (event, emojiObject) => {
     let message = msg;
+    // console.log(emojiObject.emoji)
     message += emojiObject.emoji;
     setMsg(message);
   };
@@ -26,7 +27,6 @@ export default function ChatInput({ handleSendMsg, handleSendFile, socket }) {
   };
 
   const sendFile = (e) => {
-    console.log('12')
     handleSendFile(e);
   }
 
@@ -41,8 +41,8 @@ export default function ChatInput({ handleSendMsg, handleSendFile, socket }) {
     <div id='ChatInput'>
       <div className="button-container">
         <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow} />
-          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />}
+          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow}/>
+          {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick}/>}
         </div>
       </div>
       <form className="input-container" onSubmit={(event) => sendChat(event)}>

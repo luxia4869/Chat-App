@@ -37,6 +37,7 @@ export default function ChatContainer({ currentChat, socket }) {
   }, [currentChat]);
 
   const handleSendMsg = async (msg) => {
+    console.log("hgffgfhg")
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
@@ -45,18 +46,14 @@ export default function ChatContainer({ currentChat, socket }) {
       from: data._id,
       msg,
       type: "txt",
-      bytefile: null,
+      byteFile: null,
       filename: null,
       extension: null,
     });
     await axios.post(sendMessageRoute, {
       to: currentChat._id,
       from: data._id,
-      msg,
-      type: "txt",
-      bytefile: null,
-      filename: null,
-      extension: null,
+      message: msg
     });
 
     const msgs = [...messages];
@@ -82,24 +79,24 @@ export default function ChatContainer({ currentChat, socket }) {
       from: data._id,
       msg: null,
       type: "file",
-      bytefile: byteFile,
+      byteFile: byteFile,
       filename: filename,
       extension: extension,
     });
 
-    await axios.post(sendMessageRoute, {
-      to: currentChat._id,
-      from: data._id,
-      msg: null,
-      type: "file",
-      bytefile: byteFile,
-      filename: filename,
-      extension: extension,
-    });
+    // await axios.post(sendMessageRoute, {
+    //   to: currentChat._id,
+    //   from: data._id,
+    //   msg: null,
+    //   type: "file",
+    //   bytefile: byteFile,
+    //   filename: filename,
+    //   extension: extension,
+    // });
 
-    const msgs = [...messages];
-    msgs.push({ fromSelf: true, message: msg });
-    setMessages(msgs);
+    // const msgs = [...messages];
+    // msgs.push({ fromSelf: true, message: msg });
+    // setMessages(msgs);
   };
 
   async function getAsByteArray(file) {
