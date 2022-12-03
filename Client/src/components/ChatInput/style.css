@@ -1,63 +1,63 @@
 #ChatInput {
     display: grid;
     align-items: center;
-    grid-template-columns: 5% 95%;
+    grid-template-columns: 8% 92%;
     background-color: #080420;
     padding: 0 2rem;
-    }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-    #ChatInput {
-        padding: 0 1rem;
-        gap: 1rem;
-    }
-    }
-    #ChatInput .button-container {
+}
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+#ChatInput {
+    padding: 0 1rem;
+    gap: 1rem;
+}
+}
+#ChatInput .button-container {
     display: flex;
     align-items: center;
     color: white;
     gap: 1rem;
-    }
-    #ChatInput .button-container .emoji {
+}
+#ChatInput .button-container .emoji {
     position: relative;
-    }
-    #ChatInput .button-container .emoji svg {
+}
+#ChatInput .button-container .emoji svg {
     font-size: 1.5rem;
     color: #ffff00c8;
     cursor: pointer;
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react {
+}
+#ChatInput .button-container .emoji .emoji-picker-react {
     position: absolute;
     top: -350px;
     background-color: #080420;
     box-shadow: 0 5px 10px #9a86f3;
     border-color: #9a86f3;
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar {
+}
+#ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar {
     background-color: #080420;
     width: 5px;
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar-thumb {
+}
+#ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar-thumb {
     background-color: #9a86f3;
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react .emoji-categories button {
+}
+#ChatInput .button-container .emoji .emoji-picker-react .emoji-categories button {
     filter: contrast(0);
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react .emoji-search {
+}
+#ChatInput .button-container .emoji .emoji-picker-react .emoji-search {
     background-color: transparent;
     border-color: #9a86f3;
-    }
-    #ChatInput .button-container .emoji .emoji-picker-react .emoji-group:before {
+}
+#ChatInput .button-container .emoji .emoji-picker-react .emoji-group:before {
     background-color: #080420;
-    }
-    #ChatInput .input-container {
+}
+#ChatInput .input-container {
     width: 100%;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     gap: 2rem;
     background-color: #ffffff34;
-    }
-    #ChatInput .input-container input {
+}
+#ChatInput .input-container input {
     width: 90%;
     height: 60%;
     background-color: transparent;
@@ -65,14 +65,14 @@
     border: none;
     padding-left: 1rem;
     font-size: 1.2rem;
-    }
-    #ChatInput .input-container input::selection {
+}
+#ChatInput .input-container input::selection {
     background-color: #9a86f3;
-    }
-    #ChatInput .input-container input:focus {
+}
+#ChatInput .input-container input:focus {
     outline: none;
-    }
-    #ChatInput .input-container button {
+}
+#ChatInput .input-container button {
     padding: 0.3rem 2rem;
     border-radius: 2rem;
     display: flex;
@@ -80,17 +80,33 @@
     align-items: center;
     background-color: #9a86f3;
     border: none;
-    }
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-    #ChatInput .input-container button {
-        padding: 0.3rem 1rem;
-    }
-    #ChatInput .input-container button svg {
-        font-size: 1rem;
-    }
-    }
-    #ChatInput .input-container button svg {
+}
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+#ChatInput .input-container button {
+    padding: 0.3rem 1rem;
+}
+#ChatInput .input-container button svg {
+    font-size: 1rem;
+}
+}
+#ChatInput .input-container button svg {
     font-size: 2rem;
     color: white;
-    }
+}
+
+#ChatInput .upload input {
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+
+}
+
+#ChatInput .upload .upload-icon {
+    cursor: pointer;
+    height: 1.5rem;
+    width: auto;
+}
       
