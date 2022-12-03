@@ -1,0 +1,26 @@
+#chatContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background-color: #ecedf1;
+}
+
+#chatContainer .container {
+    height: 85vh;
+    width: 85vw;
+    background-color: #ffffff;
+    box-shadow: 5px 8px 12px 2px rgba(0,0,0,0.1);
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+    #chatContainer .container {
+        grid-template-columns: 35% 65%;
+    }
+}

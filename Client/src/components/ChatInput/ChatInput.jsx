@@ -43,7 +43,7 @@ export default function ChatInput({ handleSendMsg, handleSendFile, socket }) {
     <div id='ChatInput'>
       <div className="button-container">
         <div className="emoji">
-          <BsEmojiSmileFill onClick={handleEmojiPickerhideShow}/>
+          <BsEmojiSmileFill className="bsEmoji" onClick={handleEmojiPickerhideShow}/>
           {showEmojiPicker && <Picker onEmojiClick={handleEmojiClick}/>}
         </div>
         <div className="upload">

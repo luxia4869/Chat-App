@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #393939;
     flex-direction: column;
 }
 
@@ -11,7 +11,7 @@
 }
 
 #StartChat span {
-    color: #4e0eff;
+    color: #FDB2B0;
 }
 
 #StartChat .logout {

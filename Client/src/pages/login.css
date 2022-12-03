@@ -1,0 +1,78 @@
+#RLContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    background-color: #FDB2B0;
+}
+
+#RLContainer .brand {
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#RLContainer .brand img {
+    height: 5rem;
+}
+
+#RLContainer .brand h1 {
+    color: #393939;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+#RLContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #ffffff;
+    box-shadow: 5px 8px 12px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    padding: 4rem;
+}
+
+#RLContainer input {
+    padding: 1rem;
+    border: 0.2rem solid #393939;
+    border-radius: 0.4rem;
+    color: rgb(37, 37, 37);
+    width: 100%;
+    font-size: 1rem;
+}
+
+#RLContainer input:focus {
+    border: 0.2rem solid #ABD8DB;
+    outline: none;
+}
+
+#RLContainer button {
+    color: #393939;
+    padding: 1rem 2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: #ABD8DB;
+}
+
+#RLContainer button:hover {
+    background-color: #8ac1c6;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+#RLContainer span {
+    color: #393939;
+    text-transform: uppercase;
+}
+
+#RLContainer span a {
+    color: #ABD8DB;
+    text-decoration: none;
+    font-weight: bold;
+}

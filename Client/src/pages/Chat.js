@@ -7,6 +7,7 @@ import { allUsersRoute, host } from "../utils/API";
 import ChatSreen from "../components/ChatSreen/ChatSreen";
 import AllUsers from "../components/AllUsers/AllUsers";
 import StartChat from "../components/StartChat/StartChat";
+import './chat.css';
 
 export default function Chat() {
   const navigate = useNavigate();
@@ -47,7 +48,7 @@ export default function Chat() {
   };
   return (
     <>
-      <Container>
+      <div id="chatContainer">
         <div className="container">
           <AllUsers contacts={contacts} changeChat={handleChatChange} />
           {currentChat === undefined ? (
@@ -56,28 +57,7 @@ export default function Chat() {
             <ChatSreen currentChat={currentChat} socket={socket} />
           )}
         </div>
-      </Container>
+      </div>
     </>
   );
 }
-
-const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  background-color: #131324;
-  .container {
-    height: 85vh;
-    width: 85vw;
-    background-color: #00000076;
-    display: grid;
-    grid-template-columns: 25% 75%;
-    @media screen and (min-width: 720px) and (max-width: 1080px) {
-      grid-template-columns: 35% 65%;
-    }
-  }
-`;

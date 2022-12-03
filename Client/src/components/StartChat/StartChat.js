@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './style.css'
-import Robot from "../../assets/robot.gif";
+import GIFT from "../../assets/giphy.gif";
 import LogoutButton from "../LogoutButton/LogoutButton";
 export default function Welcome() {
   const [userName, setUserName] = useState("");
@@ -17,7 +17,7 @@ export default function Welcome() {
         <LogoutButton />
       </div>
       <div className="content">
-        <img src={Robot} alt="" />
+        <img src={GIFT} alt="" />
         <h1>
           Welcome, <span>{userName}!</span>
         </h1>

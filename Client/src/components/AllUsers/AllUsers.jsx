@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../assets/logo.svg";
+import gift from "../../assets/ciu.gif";
 import './style.css'
 import axios from "axios";
 import { setAvatarRoute } from "../../utils/API";
@@ -48,8 +48,8 @@ export default function Contacts({ contacts, changeChat }) {
       {currentUserImage && currentUserImage && (
         <div id='AllUsers'>
           <div className="brand">
-            <img src={Logo} alt="logo" />
-            <h3>snappy</h3>
+            <img src={gift} alt="logo" />
+            <h2>hai chị em</h2>
           </div>
           <div className="contacts">
             {contacts.map((contact, index) => {

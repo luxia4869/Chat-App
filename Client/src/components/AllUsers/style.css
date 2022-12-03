@@ -1,8 +1,9 @@
 #AllUsers {
     display: grid;
-    grid-template-rows: 10% 75% 15%;
+    grid-template-rows: 15% 70% 15%;
     overflow: hidden;
-    background-color: #080420;
+    background-color: #ABD8DB;
+    border-radius: 2rem 0 0 2rem;
 }
 #AllUsers .brand {
     display: flex;
@@ -11,9 +12,9 @@
     justify-content: center;
 }
 #AllUsers .brand img {
-    height: 2rem;
+    height: 3rem;
 }
-#AllUsers .brand h3 {
+#AllUsers .brand h2 {
     color: white;
     text-transform: uppercase;
 }
@@ -28,21 +29,21 @@
     width: 0.2rem;
 }
 #AllUsers .contacts::-webkit-scrollbar-thumb {
-    background-color: #ffffff39;
+    background-color: #ffffff;
     width: 0.1rem;
     border-radius: 1rem;
 }
 #AllUsers .contacts .contact {
-    background-color: #ffffff34;
+    background-color: #fff;
     min-height: 5rem;
     cursor: pointer;
     width: 90%;
-    border-radius: 0.2rem;
     padding: 0.4rem;
     display: flex;
     gap: 1rem;
     align-items: center;
     transition: 0.5s ease-in-out;
+    border-radius: 0.8rem;
 }
 #AllUsers .contacts .contact .avatar img {
     height: 3rem;
@@ -50,13 +51,13 @@
     border-radius: 100%;
 }
 #AllUsers .contacts .contact .username h3 {
-    color: white;
+    color: #393939;
 }
 #AllUsers .contacts .selected {
-    background-color: #9a86f3;
+    background-color: #ecedf1;
 }
 #AllUsers .current-user {
-    background-color: #0d0d30;
+    background-color: #FDB2B0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +99,7 @@
 
 
 #AllUsers .current-user .username h2 {
-    color: white;
+    color: #fff;
 }
 @media screen and (min-width: 720px) and (max-width: 1080px) {
     #AllUsers .current-user {
