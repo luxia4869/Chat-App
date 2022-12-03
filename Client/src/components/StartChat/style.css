@@ -7,7 +7,7 @@
 }
 
 #StartChat img {
-    height: 20rem;
+    height: 25rem;
 }
 
 #StartChat span {
@@ -27,4 +27,13 @@
     align-items: center;
     flex-direction: column;
     flex: 94%;
+}
+
+#StartChat .content h1 {
+    font-size: 2.5rem;
+}
+
+#StartChat .content h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
 }

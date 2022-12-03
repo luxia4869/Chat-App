@@ -34,35 +34,10 @@
 #ChatInput .button-container .emoji .emoji-picker-react {
     position: absolute;
     top: -350px;
-    /* background-color: #ffffff;
-    box-shadow: 0 5px 10px #9a86f3;
-    border-color: #9a86f3; */
 }
 #ChatInput .button-container .emoji .bsEmoji {
    color: #9a86f3;
 }
-
-/* #ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar {
-    background-color: #eaeaea;
-    width: 5px;
-}
-
-#ChatInput .button-container .emoji .emoji-picker-react .emoji-scroll-wrapper::-webkit-scrollbar-thumb {
-    background-color: #9a86f3;
-}
-
-#ChatInput .button-container .emoji .emoji-picker-react .emoji-categories button {
-    filter: contrast(0);
-}
-
-#ChatInput .button-container .emoji .emoji-picker-react .emoji-search {
-    background-color: transparent;
-    border-color: #9a86f3;
-}
-
-#ChatInput .button-container .emoji .emoji-picker-react .emoji-group:before {
-    background-color: #949494;
-} */
 
 #ChatInput .input-container {
     width: 100%;
@@ -75,16 +50,16 @@
 
 #ChatInput .input-container input {
     width: 90%;
-    height: 60%;
+    height: 100%;
     background-color: transparent;
     color: #393939;
     border: none;
     padding-left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 #ChatInput .input-container input::selection {
-    background-color: #9a86f3;
+    background-color: #f8b5b4e2;
 }
 
 #ChatInput .input-container input:focus {
