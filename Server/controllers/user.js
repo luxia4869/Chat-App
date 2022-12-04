@@ -72,7 +72,7 @@ module.exports.setAvatar = async (req, res, next) => {
             console.log(err)
         }
         else{
-            console.log("Updated User : ", docs);
+            console.log("Updated");
         }}
     );
     const filePath = path.join(__dirname,'../public/upload/', fileName);

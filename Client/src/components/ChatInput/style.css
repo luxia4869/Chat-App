@@ -1,7 +1,7 @@
 #ChatInput {
     display: grid;
     align-items: center;
-    grid-template-columns: 8% 92%;
+    grid-template-columns: 10% 90%;
     background-color: #ecedf1;
     padding: 0 2rem;
     border-radius: 0 0 2rem 0;
@@ -12,6 +12,13 @@
         padding: 0 1rem;
         gap: 1rem;
     }
+    
+}
+
+@media screen and (min-width: 1080px){
+    #ChatInput .button-container{
+        margin-right: 1rem;
+    }
 }
 
 #ChatInput .button-container {
@@ -19,6 +26,8 @@
     align-items: center;
     color: white;
     gap: 1rem;
+    justify-content: right;
+    /* margin-right: 0rem; */
 }
 
 #ChatInput .button-container .emoji {

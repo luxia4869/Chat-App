@@ -29,7 +29,7 @@
     width: 0.2rem;
 }
 #AllUsers .contacts::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
+    background-color: #e8e1e1;
     width: 0.1rem;
     border-radius: 1rem;
 }
